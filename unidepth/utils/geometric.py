@@ -253,7 +253,7 @@ def flat_interpolate(
 
 
 @torch.jit.script
-def dilate(image, kernel_size: int | tuple[int, int]):
+def dilate(image, kernel_size: Tuple[int, int]):
     if isinstance(kernel_size, int):
         kernel_size = (kernel_size, kernel_size)
     device, dtype = image.device, image.dtype
@@ -269,7 +269,7 @@ def dilate(image, kernel_size: int | tuple[int, int]):
 
 
 @torch.jit.script
-def erode(image, kernel_size: int | tuple[int, int]):
+def erode(image, kernel_size: Tuple[int, int]):
     if isinstance(kernel_size, int):
         kernel_size = (kernel_size, kernel_size)
     device, dtype = image.device, image.dtype

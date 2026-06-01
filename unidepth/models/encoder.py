@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from unidepth.models.backbones import ConvNeXt, ConvNeXtV2, _make_dinov2_model
+from unidepth.models.backbones import _make_dinov2_model #ConvNeXt, ConvNeXtV2, 
 
 
 class ModelWrap(nn.Module):
